@@ -1,10 +1,10 @@
 # splashplug
 
-Requirements:
+## Requirements:
 
-- Python 3.x
-- Chromedriver
+### - Python 3.x
+### - Chromedriver
 
-Run: 
+## Run: 
 
-python3 splash.py run.bat && (bash run.bat file1 & bash run.bat file2)
+### python3 splash.py run.bat && (bash run.bat file1 & bash run.bat file2)
