@@ -50,11 +50,4 @@ fi
 """)
 f.close()
 
-"""while True:
-    try:
-        with open('cook', 'r') as fin:
-            print(fin.read(), end = "")
-    except:
-        continue"""
-
     
