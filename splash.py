@@ -3,9 +3,18 @@ from selenium.webdriver import DesiredCapabilities
 import sys
 
 fn = sys.argv[1]
+proxy = sys.argv[2]
 
-#Change the path below to where your chrome driver is
-driver = webdriver.Chrome(r"/Users/hasan/Downloads/chromedriver")
+if proxy:
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--proxy-server=%s' % proxy)
+    # Change the path below to point to your chromedriver
+    driver = webdriver.Chrome(r"/Users/hasan/Downloads/chromedriver", chrome_options=chrome_options)
+
+else:
+    # Change the path below to point to your chromedriver
+    driver = webdriver.Chrome(r"/Users/hasan/Downloads/chromedriver")
     
 x = ""
 driver.get('http://www.adidas.com/yeezy')
