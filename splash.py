@@ -4,6 +4,7 @@ import sys
 
 fn = sys.argv[1]
 
+#Change the path below to where your chrome driver is
 driver = webdriver.Chrome(r"/Users/hasan/Downloads/chromedriver")
     
 x = ""
