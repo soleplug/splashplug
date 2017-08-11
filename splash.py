@@ -4,12 +4,6 @@ import sys
 
 fn = sys.argv[1]
 
-proxy = {
-  'http': 'http://127.0.0.1:8888',
-  'https': 'http://127.0.0.1:8888',
-}
-    
-
 driver = webdriver.Chrome(r"/Users/hasan/Downloads/chromedriver")
     
 x = ""
