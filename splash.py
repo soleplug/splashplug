@@ -28,14 +28,14 @@ args=("$@")
 if [[ ${args[1]} == *"proxy"* ]]; then
     while true; do
         response=$(curl -x ${args[2]} -c ${args[0]} -s -k -i --compressed "http://www.adidas.com/us/apps/yeezy/" -H "Host: www.adidas.com" -H "Connection: keep-alive" -H "Cache-Control: max-age=0" -H "Upgrade-Insecure-Requests: 1" -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "Cookie: """ + x + """")
-        if [[ $response == *"YEEZY"* ]]; then
+        if [[ $response == *"sitekey"* ]]; then
             echo -n "."
         fi
     done
 else
     while true; do
         response=$(curl -c ${args[0]} -s -k -i --compressed "http://www.adidas.com/us/apps/yeezy/" -H "Host: www.adidas.com" -H "Connection: keep-alive" -H "Cache-Control: max-age=0" -H "Upgrade-Insecure-Requests: 1" -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "Cookie: """ + x + """")
-        if [[ $response == *"YEEZY"* ]]; then
+        if [[ $response == *"sitekey"* ]]; then
             echo -n "."
         fi
     done
